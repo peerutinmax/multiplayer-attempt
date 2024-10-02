@@ -79,18 +79,22 @@ io.on('connection', (socket) => {
     backEndPlayers[socket.id].sequenceNumber = sequenceNumber
     switch (keycode) {
       case 'KeyW':
+      case 'ArrowUp':
         backEndPlayers[socket.id].y -= SPEED
         break
 
       case 'KeyA':
+      case 'ArrowLeft':
         backEndPlayers[socket.id].x -= SPEED
         break
 
       case 'KeyS':
+      case 'ArrowDown':
         backEndPlayers[socket.id].y += SPEED
         break
 
       case 'KeyD':
+      case 'ArrowRight':
         backEndPlayers[socket.id].x += SPEED
         break
     }
